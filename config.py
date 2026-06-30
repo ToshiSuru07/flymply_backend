@@ -1,9 +1,9 @@
 """Configuration module for turbulence prediction backend."""
-import os
-from pathlib import Path
+
+
 
 # Base paths
-BASE_DIR = Path(__file__).parent
+BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
 DATA_FOR_MODEL_DIR = BASE_DIR / "data_for_model"  # For .tar files

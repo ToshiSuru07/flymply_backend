@@ -18,7 +18,7 @@ MODELS_DIR.mkdir(parents=True, exist_ok=True)
 # Server configuration
 PORT = int(os.getenv("PORT", 5000))
 HOST = os.getenv("HOST", "0.0.0.0")
-DEBUG = os.getenv("DEBUG", "False").lower() == "true"
+DEBUG = os.getenv("DEBUG", "false").lower() == "true"
 
 # Model paths
 MODEL_PATH = os.getenv("MODEL_PATH", str(MODELS_DIR / "lstm_autoencoder.pth"))

@@ -1,6 +1,8 @@
 class FeatureEngineer:
     def __init__(self):
         self.previous_weather = None
+    def __init__(self):
+        self.previous_weather = None
     
     def extract_features(self, weather_data):
         """

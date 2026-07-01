@@ -148,6 +148,7 @@ def predict():
         
         # Validate request
         if not request.is_json:
+    return jsonify({"error": "Request must be JSON"}), 400
             return jsonify({"error": "Request must be JSON"}), 400
         
         data = request.get_json()

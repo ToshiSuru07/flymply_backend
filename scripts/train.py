@@ -87,7 +87,8 @@ def train_model():
             logger.info(f"Epoch [{epoch+1}/{EPOCHS}], Loss: {avg_loss:.6f}")
     
     # Save model
-    torch.save(model.state_dict(), MODEL_PATH)
+    torch.save(model.state_dict(), MODEL_PATH + '.tmp')
+    os.replace(MODEL_PATH + '.tmp', MODEL_PATH)
     logger.info(f"Model saved to {MODEL_PATH}")
     
     return model, avg_loss, len(windows)

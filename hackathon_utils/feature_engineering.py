@@ -1,6 +1,6 @@
 class FeatureEngineer:
     def __init__(self):
-        self.previous_weather = None
+        self.previous_weather = None # Note: State is not persistent across Gunicorn workers
     
     def extract_features(self, weather_data):
         """
